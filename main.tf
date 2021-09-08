@@ -1,3 +1,12 @@
+terraform {
+  required_version = ">=1.0.4"
+  backend "s3" {
+    bucket = "myapp-s3bucket"
+    key    = "myapp/state.tfstate"
+    region = "ap-southeast-1"
+  }
+}
+
 provider "aws" {
   region                  = var.region
   shared_credentials_file = var.credentials
