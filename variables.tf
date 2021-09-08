@@ -3,7 +3,7 @@ variable credentials {
 }
 
 variable profile {
-  description = "profile for credentials ie. default"
+  description = "profile for credentials"
 }
 
 variable public_key_location {
@@ -37,15 +37,22 @@ variable env_prefix {
 variable vpc_cidr_block {
   description = "cidr block for vpc" 
   type        = string
+  default     = "10.0.0.0/16"
 }
 
 variable subnets_cidr_block {
   description = "cidr blocks for subnet" 
   type        = list(string)
+  default     = ["10.0.10.0/24"]
 }
 
 variable my_ip {
   description = "ip address used in ingress cidr block for ssh"
+}
+
+variable image_name {
+  description = "name of AMI image"
+  default     = "amzn2-ami-hvm-*-x86_64-gp2"
 }
 
 variable instance_type {
