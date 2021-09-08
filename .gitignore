@@ -1,0 +1,17 @@
+# local .terraform directories
+**/.terraform/*
+**/.terraform.lock.hcl
+
+# .tfstate files
+*.tfstate
+*.tfstate.*
+
+# exclude all .tfvars files whch are likely to contain sensitive data
+*.tfvars
+
+# ignore CLI configuration files
+.terraformrc
+terraform.rc
+
+# ignore MAC/OSX system file
+.DS_store
